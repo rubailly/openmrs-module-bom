@@ -12,7 +12,7 @@
 	
 	<developers>
 		<developer>
-			<name>rbailly</name>
+			<name>RURANGIRWA Bailly</name>
 		</developer>
 	</developers>
 	
@@ -22,9 +22,9 @@
 	</organization>
 
 	<scm>
-		<connection>scm:svn:http://svn.openmrs.org/openmrs-modules/bom/trunk/</connection>
-		<developerConnection>scm:svn:http://svn.openmrs.org/openmrs-modules/bom/trunk/</developerConnection>
-		<url>http://svn.openmrs.org/openmrs-modules/bom/trunk/</url>
+		<connection>scm:svn:http://svn.openmrs.org/openmrs-modules/formconcepts/trunk/</connection>
+		<developerConnection>scm:svn:http://svn.openmrs.org/openmrs-modules/formconcepts/trunk/</developerConnection>
+		<url>http://svn.openmrs.org/openmrs-modules/formconcepts/trunk/</url>
 	</scm>
 
 	<modules>
@@ -35,22 +35,22 @@
 	<properties>
 		<openMRSVersion>1.8.2</openMRSVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		 <htmlformentryModuleVersion>2.0.5-SNAPSHOT</htmlformentryModuleVersion>
 	</properties>
 
-	<dependencyManagement>
 		<dependencies>
 		
-			<!--
-			Libraries to add as dependencies with compile or runtime scope:
-			Find matching dependencies in the maven central repository.
+			<!-- Begin OpenMRS modules -->
+
+
 			<dependency>
-				<groupId>org.other.library</groupId>
-				<artifactId>library-name</artifactId>
-				<version>library.version</version>
-				<scope>compile</scope>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>htmlformentry-api</artifactId>
+				<version>${htmlformentryModuleVersion}</version>
+				<scope>provided</scope>
 			</dependency>
-			-->
-			
+
+			<!-- End OpenMRS modules -->			
 			
 
 			<!-- Begin OpenMRS core -->
@@ -98,7 +98,7 @@
 			<!-- End OpenMRS core -->
 
 		</dependencies>
-	</dependencyManagement>
+
 
 	<build>
 		<pluginManagement>

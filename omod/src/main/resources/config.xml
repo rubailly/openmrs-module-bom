@@ -14,7 +14,13 @@
 	<updateURL>https://dev.openmrs.org/modules/download/${project.parent.artifactId}/update.rdf</updateURL>
 	<require_version>${openMRSVersion}</require_version>
 	<!-- / Module Properties -->
-
+	<!-- Required Modules -->
+	<require_modules>
+		<require_module version="${htmlformentryModuleVersion}">
+			org.openmrs.module.htmlformentry
+		</require_module>
+	</require_modules>
+	<!-- / Required Modules -->
 	
 	<!-- Module Activator -->
 	<activator>${project.parent.groupId}.${project.parent.artifactId}.BOMActivator</activator>
