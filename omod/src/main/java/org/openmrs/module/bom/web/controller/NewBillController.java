@@ -36,12 +36,12 @@ import org.springframework.web.servlet.view.RedirectView;
  * TODO: This has a bit too much logic in the onSubmit method. Move that into the FormEntrySession.
  */
 @Controller
-public class BOMManageController {
+public class NewBillController {
     protected final Log log = LogFactory.getLog(getClass());
 //    public final static String closeDialogView = "/module/htmlformentry/closeDialog";
     public final static String FORM_IN_PROGRESS_KEY = "HTML_FORM_IN_PROGRESS_KEY";
     public final static String FORM_IN_PROGRESS_VALUE = "HTML_FORM_IN_PROGRESS_VALUE";
-    public final static String FORM_PATH = "/module/bom/manage";
+    public final static String FORM_PATH = "/module/bom/newBill";
     @RequestMapping(method=RequestMethod.GET, value=FORM_PATH)
     public void showForm() {
         // Intentionally blank. All work is done in the getFormEntrySession method
