@@ -20,6 +20,11 @@
 			org.openmrs.module.htmlformentry
 		</require_module>
 	</require_modules>
+	<require_modules>
+		<require_module version="${reportingModuleVersion}">
+			org.openmrs.module.reporting
+		</require_module>
+	</require_modules>
 	<!-- / Required Modules -->
 	
 	<!-- Module Activator -->
@@ -54,6 +59,14 @@
 		<file>messages_es.properties</file>
 	</messages>
 	<!-- /Internationalization -->
+	
+	<globalProperty>
+		<property>bom.prices</property>
+		<defaultValue>Primus:8080|Mutzing:1000|Fanta:350</defaultValue>
+		<description>
+			The prices all items. The format is to use the product name followed by a semi column and the price of the product. (eg: primus:800)
+		</description>
+	</globalProperty>
 
 </module>
 
