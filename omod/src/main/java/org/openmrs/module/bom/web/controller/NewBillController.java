@@ -66,6 +66,7 @@ public class NewBillController {
         patientId   = 71158;
         formId = 198; // <-----------------------this is where you need to mention the FORM ID or HTML Form id in below variable
         htmlFormId = 117; //<--------------------|
+        
          //Integer.parseInt(request.getParameter("formId"));
 //        if (StringUtils.hasText(request.getParameter("personId"))) {
 //            personId = Integer.valueOf(request.getParameter("personId"));
