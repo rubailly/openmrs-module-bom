@@ -1,9 +1,23 @@
 <%@ include file="/WEB-INF/template/include.jsp" %>
-<%@ include file="/WEB-INF/template/header.jsp" %>
 <c:set var="usernameText"><spring:message code="User.username"/></c:set>
 <c:set var="pwdText" scope="page"><spring:message code="User.password"/></c:set>
-<p>Aha ni kuri login yacu!</p>
-<form method="POST" action="myLogin.htm" autocomplete="off">
+
+<head>
+<openmrs:htmlInclude file="/moduleResources/bom/css/layout.css" />
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <!-- Begin Header -->
+  <div id="header"><h1><a href="#">Add image here</a></h1></div>
+  <!-- End Header -->
+  <!-- Begin Naviagtion -->
+  <div id="navigation"> Navigation Here </div>
+  <!-- End Naviagtion -->
+  <!-- Begin Content -->
+  <div id="content" align="center"> 
+  
+  <form method="POST" action="myLogin.htm" autocomplete="off">
 	<table>
 		<tr>
 			<td>${usernameText}:</td>
@@ -20,8 +34,17 @@
 	</table>
 	<br/>	
 </form>	
+  
+   </div>
+  <!-- End Content -->
+  <!-- Begin Footer -->
+  <div id="footer"> This is the Footer </div>
+  <!-- End Footer -->
+ </div>
+<!-- End Wrapper -->
+
 <script type="text/javascript">
  	document.getElementById('username').focus();
 </script>
-	
-<%@ include file="/WEB-INF/template/footer.jsp" %>
+
+</body>
