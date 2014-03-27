@@ -1,16 +1,7 @@
-<%@ include file="/WEB-INF/view/module/reporting/include.jsp"%>
-<%@ include file="/WEB-INF/view/module/reporting/includeScripts.jsp"%>
-
-<openmrs:require privilege="View Reports" otherwise="/login.htm" redirect="/module/reporting/dashboard/index.form" />
-
-
-<style>
-	.datatables_info {
-		font-weight:normal;
-		font-size: 8pt;
-	}
-</style>
-
+<%@ include file="localHeader.jsp" %>
+		<!-- Begin Content -->
+		<div id="content" align="center">
+		
 <div id="page">
 	<div id="container">
 		<table style="width:100%; padding:10px;">
@@ -22,7 +13,7 @@
 							<legend>
 								<b><spring:message code="reporting.availableReports"/></b>
 							</legend>
-							<openmrs:portlet url="reportList" moduleId="reporting" parameters="numOnPage=15"/>
+							<openmrs:portlet url="bomRunReport" moduleId="bom" parameters="numOnPage=15"/>
 						</fieldset>
 					</div>
 					<br/>
@@ -41,11 +32,11 @@
 						<legend>
 							<b><spring:message code="reporting.Report.mostRecentlyCompletedReport"/></b>
 							&nbsp;&nbsp;
-							<a href="${pageContext.request.contextPath}/module/reporting/reports/reportHistory.form">
+							<a href="${pageContext.request.contextPath}/module/bom/bomReportHistory.form">
 								(<spring:message code="reporting.viewAll"/>)
 							</a>
 						</legend>
-						<openmrs:portlet url="reportRequests" id="completedRequests" moduleId="reporting" parameters="status=SAVED,COMPLETED,FAILED|mostRecentNum=10|numOnPage=10"/>
+						<openmrs:portlet url="bomReportRequests" id="completedRequests" moduleId="bom" parameters="status=SAVED,COMPLETED,FAILED|mostRecentNum=10|numOnPage=10"/>
 					</fieldset>
 				</td>
 			</tr>
@@ -53,4 +44,7 @@
 	</div>
 </div>
 
-<%@ include file="/WEB-INF/template/footer.jsp"%>
+</div>
+		<!-- End Content -->
+<%@ include file="localFooter.jsp" %>
+

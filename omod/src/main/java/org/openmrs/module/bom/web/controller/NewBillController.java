@@ -198,7 +198,7 @@ public class NewBillController {
             HtmlFormEntryUtil.getService().applyActions(session);
             String successView = session.getReturnUrlWithParameters();
             if (successView == null)
-                successView = request.getContextPath() + "/patientDashboard.form" + getQueryPrameters(request, session);
+                successView = request.getContextPath() + "/module/bom/manageBills.form" + getQueryPrameters(request, session);
             if (StringUtils.hasText(request.getParameter("closeAfterSubmission"))) {
 //                return new ModelAndView(closeDialogView, "dialogToClose", request.getParameter("closeAfterSubmission"));
             } else {

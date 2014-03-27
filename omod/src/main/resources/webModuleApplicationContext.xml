@@ -27,6 +27,29 @@
 	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
 	
 	<context:component-scan base-package="org.openmrs.module.bom.web.controller" />
- 
-		
+
+	<!-- Set up URL mappings for new URLs -->
+    <bean id="bomReportingUrlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+    	<property name="order"><value>40</value></property>
+    	<property name="mappings">
+            <props>
+                <prop key="**/bomReportRequests.portlet">bomReportRequestPortletController</prop>
+            	<prop key="**/bomRunReport.portlet">bomRunReportPortletController</prop>
+				<prop key="module/bom/runReport.form">bomRunReportForm</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="bomReportRequestPortletController" class="org.openmrs.module.bom.web.controller.BomReportRequestPortletController" />
+	<bean id="bomRunReportPortletController" class="org.openmrs.module.bom.web.controller.BomRunReportPortletController" />
+	
+	<bean id="bomRunReportForm" class="org.openmrs.module.bom.web.controller.BomRunReportFormController">
+        <property name="commandName"><value>report</value></property>
+        <property name="formView"><value>/module/bom/bomRunReportForm</value></property>
+        <property name="successView"><value>runReport.list</value></property>
+        <property name="validator">
+		    <ref bean="bomRunReportForm" />
+		</property>
+    </bean>
+
 </beans>
+	

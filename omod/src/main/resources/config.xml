@@ -16,14 +16,9 @@
 	<!-- / Module Properties -->
 	<!-- Required Modules -->
 	<require_modules>
-		<require_module version="${htmlformentryModuleVersion}">
-			org.openmrs.module.htmlformentry
-		</require_module>
-	</require_modules>
-	<require_modules>
-		<require_module version="${reportingModuleVersion}">
-			org.openmrs.module.reporting
-		</require_module>
+		<require_module version="${htmlformentryModuleVersion}">org.openmrs.module.htmlformentry</require_module>
+		<require_module version="${reportingModuleVersion}">org.openmrs.module.reporting</require_module>
+		<require_module version="1.6.1">org.openmrs.module.htmlwidgets</require_module>
 	</require_modules>
 	<!-- / Required Modules -->
 	
@@ -35,6 +30,11 @@
 	<extension>
 		<point>org.openmrs.admin.list</point>
 		<class>${project.parent.groupId}.${project.parent.artifactId}.extension.html.AdminList</class>
+	</extension>
+	
+	<extension>
+		<point>org.openmrs.module.web.extension.FormEntryHandler</point>
+		<class>org.openmrs.module.bom.extension.html.BomFormEntryHandlerExtension</class>
 	</extension>
 	
 	<!-- Maps hibernate file's, if present -->

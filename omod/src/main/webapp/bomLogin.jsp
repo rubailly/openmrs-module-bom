@@ -9,10 +9,10 @@
 <!-- Begin Wrapper -->
 <div id="wrapper">
   <!-- Begin Header -->
-  <div id="header"><h1><a href="#">Add image here</a></h1></div>
+  <div id="header">--</div>
   <!-- End Header -->
   <!-- Begin Naviagtion -->
-  <div id="navigation"> Navigation Here </div>
+  <div id="navigation"></div>
   <!-- End Naviagtion -->
   <!-- Begin Content -->
   <div id="content" align="center"> 

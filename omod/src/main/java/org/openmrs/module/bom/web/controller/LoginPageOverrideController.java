@@ -130,7 +130,7 @@ public class LoginPageOverrideController {
     }
 
 	
-	@RequestMapping("logout.htm")
+	@RequestMapping("/module/bom/logout.htm")
     public String logoutUser(ModelMap model, HttpSession session, HttpServletRequest request, HttpServletResponse response) {        
 				
 		try {
@@ -142,14 +142,14 @@ public class LoginPageOverrideController {
 			session.setAttribute(WebConstants.OPENMRS_LOGIN_REDIRECT_HTTPSESSION_ATTR, request.getContextPath());			
 			session.invalidate();
 			
-			return "redirect:login.htm";
+			 return "/module/bom/bomLogin";
 											
 		} catch (Exception e) {
 			//TODO
 			log.error("Uexpected auth error", e);
 		}
 					
-		return "redirect:login.htm";
+		 return "/module/bom/bomLogin";
     }
 	
 	

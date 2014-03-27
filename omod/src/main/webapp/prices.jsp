@@ -1,9 +1,12 @@
-<%@ include file="/WEB-INF/template/include.jsp" %>
+<%@ include file="localHeader.jsp" %>
 
-<%@ include file="/WEB-INF/template/header.jsp" %>
+<%@ include file="headerMinimal.jsp"%>
 
-	<openmrs:htmlInclude file="/dwr/interface/DWRAdministrationService.js" />
-	<openmrs:htmlInclude file="/dwr/util.js" />
+<openmrs:htmlInclude file="/dwr/interface/DWRAdministrationService.js" />
+<openmrs:htmlInclude file="/dwr/util.js" />
+
+		<!-- Begin Content -->
+		<div id="content" align="center">
 
 <style>
 	.datatables_info {
@@ -18,5 +21,6 @@
 <openmrs:portlet
     url="globalProperties"
     parameters="title=${title}|propertyPrefix=bom.|excludePrefix=bom.started;bom.mandatory|hidePrefix=true|readOnly=false"/>
-
-<%@ include file="/WEB-INF/template/footer.jsp" %>
+		</div>
+  <!-- End Content -->
+ <%@ include file="localFooter.jsp" %>

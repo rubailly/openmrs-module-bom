@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/template/include.jsp" %>
+<%@ include file="localHeader.jsp"%>
  
 <c:set var="OPENMRS_DO_NOT_SHOW_PATIENT_SET" scope="request" value="true"/>
 <c:set var="pageFragment" value="${param.pageFragment != null && param.pageFragment}"/>
@@ -6,14 +6,6 @@
  
 <c:if test="${not pageFragment}">
     <c:set var="DO_NOT_INCLUDE_JQUERY" value="true"/>
-    <c:choose>
-        <c:when test="${inPopup}">
-            <%@ include file="/WEB-INF/template/headerMinimal.jsp" %>
-        </c:when>
-        <c:otherwise>
-            <%@ include file="/WEB-INF/template/header.jsp" %>
-        </c:otherwise>
-    </c:choose>
  
     <openmrs:htmlInclude file="/dwr/engine.js" />
     <openmrs:htmlInclude file="/dwr/util.js" />
@@ -328,7 +320,7 @@
      
      
 </script>
- 
+<div id="content" align="center">
 <c:if test="${command.context.mode != 'VIEW'}">
     <spring:hasBindErrors name="command">
         <spring:message code="fix.error"/>
@@ -435,14 +427,7 @@
         });
     </script>
 </c:if>
- 
-<c:if test="${!pageFragment}">
-    <c:choose>
-        <c:when test="${inPopup}">
-            <%@ include file="/WEB-INF/template/footerMinimal.jsp" %>
-        </c:when>
-        <c:otherwise>
-            <%@ include file="/WEB-INF/template/footer.jsp" %>
-        </c:otherwise>
-    </c:choose>
-</c:if>
+</div>
+<!-- End Content -->
+
+<%@ include file="localFooter.jsp"%>

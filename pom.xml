@@ -36,7 +36,8 @@
 		<openMRSVersion>1.8.2</openMRSVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<htmlformentryModuleVersion>2.0.5-SNAPSHOT</htmlformentryModuleVersion>
-		<reportingModuleVersion>0.7.8</reportingModuleVersion>
+		<reportingModuleVersion>0.8.3-SNAPSHOT</reportingModuleVersion>
+		<htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
 	</properties>
 
 		<dependencies>
@@ -57,6 +58,27 @@
 				<version>${reportingModuleVersion}</version>
 				<scope>provided</scope>
 			</dependency>
+			
+			<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>reporting-omod</artifactId>
+			<version>${reportingModuleVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+			
+			<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>htmlwidgets-api</artifactId>
+			<version>${htmlwidgetsVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>htmlwidgets-omod</artifactId>
+			<version>${htmlwidgetsVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
 			<!-- End OpenMRS modules -->			
 			

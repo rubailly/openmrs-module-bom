@@ -6,10 +6,10 @@ body {
 }
 #wrapper { 
  margin: 0 auto;
- width: 922px;
+ width: 1322px;
 }
 #header {
- width: 900px;
+width: 1300px;
  color: #333;
  padding: 10px;
  border: 1px solid #ccc;
@@ -18,7 +18,7 @@ body {
  background: #0BA55E;
 }
 #navigation {
- width: 900px;
+ width: 1300px;
  color: #333;
  padding: 10px;
  border: 1px solid #ccc;
@@ -26,19 +26,61 @@ body {
  background-color:#A8CD1B;
 }
 #content { 
- width: 900px;
+ width: 1300px;
  color: #333;
  border: 1px solid #ccc;
  background:#ECECEA;
  margin: 0px 0px 5px 0px;
  padding: 10px;
- height: 350px;
+ height: 500px;
 }
 #footer { 
- width: 900px;
+ width: 1300px;
  color: #333;
  border: 1px solid #ccc;
  background-color:#CBE32D;
  margin: 0px 0px 10px 0px;
  padding: 10px;
+}
+
+#navigationPosition ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+}
+#navigationPosition li
+{
+float:left;
+padding-right: 20px;
+}
+a
+{
+display:block;
+text-decoration: none;
+}
+
+a:link {
+ color: black;
+ font-weight:bold;
+}
+a:visited {
+ color: black;
+}
+a:hover {
+ color: white;
+ text-decoration: none;
+}
+a:active {
+ color: #777777;
+}
+#navigationPosition{
+width:700px;
+margin: 0px auto 0px auto;
+}
+table.patientEncounters { 
+	width: 100%;
+	margin-right: 20px;
+	border:none;
 }

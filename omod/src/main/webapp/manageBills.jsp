@@ -1,8 +1,10 @@
+<%@ include file="localHeader.jsp" %>
+
 <%@ include file="/WEB-INF/template/include.jsp" %>
 
 <openmrs:require privilege="View Patients" otherwise="/login.htm" redirect="/manageBills.form" />
 
-<%@ include file="/WEB-INF/template/header.jsp" %>
+<%@ include file="headerMinimal.jsp"%>
 
 <%-- Files from encounter and graph portlets being included near header to improve page loading speed
      If those tabs/portlets are no longer using them, they should be removed from here --%>
@@ -30,6 +32,9 @@
 
 </script>
 
+<!-- Begin Content -->
+		<div id="content" align="center">
+
    <openmrs:hasPrivilege privilege="Patient Dashboard - View Encounters Section">
 					<div id="patientEncounters">
 						<openmrs:globalProperty var="maxEncs" key="dashboard.encounters.maximumNumberToShow" defaultValue="" />
@@ -37,5 +42,7 @@
 						
 					</div>
 	</openmrs:hasPrivilege>
-	
-<%@ include file="/WEB-INF/template/footer.jsp" %>
+
+</div>
+		<!-- End Content -->
+<%@ include file="localFooter.jsp" %>
